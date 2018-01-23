@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+	<title>Document</title>
+
+	<style>
+		.wrap{
+			width:100%;
+			height: 500px;
+			border: 1px solid red;
+			box-sizing: border-box;
+			margin-top: 100px;
+			overflow: hidden;
+			position: relative;
+		}
+		.middle{
+			width:100%;
+			height: 600px;
+			background: green;
+			position: absolute;
+			top:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="middle">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	</div>
+</body>
+<script src="http://hammerjs.github.io/dist/hammer.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+	$(".middle").on("touchstart",function(e){
+		console.log(e);
+	})
+</script>
+</html>
